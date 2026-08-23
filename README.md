@@ -7,8 +7,14 @@ Static site served by GitHub Pages. No build step: edit the HTML and push.
 - `privacy.html` — privacy policy (required by both app stores)
 - `support.html` — support page (Apple requires a reachable support URL)
 - `terms.html` — terms of use
-- `css/style.css` — design system inherited from the Pippin Plaza site, restyled
-  to a lapis-and-brass studio palette so the studio and the game brands stay distinct
+- `css/style.css` — original responsive design system for the Alulim publisher identity
+- `assets/alulim-logo.png` — supplied transparent Alulim Games studio logo used in site lockups
+- `assets/alulim-mark.svg` — lightweight favicon mark
+- `assets/bills-due-cover.jpg` — web-optimised export of the approved Bills Due app artwork
+- `assets/bills-due-gameplay.png` — retained landscape capture from the actual game build
+- `assets/bills-due-action.png` — supplied transparent landscape action capture
+- `assets/bills-due-payday.png` — supplied transparent landscape coin-filled action capture
+- `assets/bills-due-frontend.png` — supplied transparent landscape obligation and upgrades capture
 
 ## Before submitting an app
 
@@ -20,8 +26,8 @@ Static site served by GitHub Pages. No build step: edit the HTML and push.
 3. The privacy policy describes the app **as it ships with ads enabled**. Do not
    publish an app whose behaviour differs from it.
 
-## Fonts
+## Performance
 
-The Pippin Plaza display font (`Jumps-Winter.ttf`) is deliberately **not** copied here.
-Its licence is not declared in that repository and font licences are frequently
-per-project. This site uses DM Sans and JetBrains Mono from Google Fonts.
+The site has no framework, build step, JavaScript, analytics, or remote font request.
+Navigation and FAQ disclosure use native HTML. The first action capture is preloaded;
+the remaining game captures load lazily below the fold.
