@@ -151,7 +151,7 @@ h3 {
 
 .nav-shell {
   display: flex;
-  min-height: 4.75rem;
+  min-height: 5rem;
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
@@ -165,11 +165,35 @@ h3 {
   text-decoration: none;
 }
 
-.brand-logo {
-  width: 4.4rem;
-  height: 4.4rem;
+/* The wordmark is live text rather than part of the image, so it stays crisp at
+   any size, is readable to search engines and screen readers, and lets the
+   header stay compact. The emblem is the only part that has to be artwork. */
+.brand-mark {
+  width: 3.1rem;
+  height: 3.1rem;
   flex: 0 0 auto;
   object-fit: contain;
+}
+
+.brand-name {
+  display: grid;
+  gap: 0.1rem;
+  font-family: var(--display);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.brand-name-primary {
+  font-size: 1.32rem;
+  font-weight: 700;
+  letter-spacing: 0.17em;
+}
+
+.brand-name-secondary {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.42em;
+  opacity: 0.78;
 }
 
 .site-nav {
@@ -858,10 +882,15 @@ h3 {
   color: var(--white);
 }
 
-.site-footer .brand-logo {
-  width: 7rem;
-  height: 7rem;
-  filter: grayscale(1) brightness(0) invert(1);
+/* The footer uses a white emblem asset rather than a CSS invert filter, so the
+   mark renders identically everywhere instead of depending on filter support. */
+.site-footer .brand-mark {
+  width: 3.6rem;
+  height: 3.6rem;
+}
+
+.site-footer .brand-name-secondary {
+  opacity: 0.62;
 }
 
 .footer-intro {
@@ -1358,9 +1387,25 @@ h3 {
     display: none;
   }
 
+  /* Centre the logo on mobile: a three-column track keeps the brand truly
+     centred in the viewport rather than centred in the space the menu leaves. */
+  .nav-shell {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .brand {
+    grid-column: 2;
+    justify-self: center;
+  }
+
   .mobile-nav {
     display: block;
-    margin-left: auto;
+    grid-column: 3;
+    justify-self: end;
+    margin-left: 0;
   }
 
   .hero-grid,
@@ -1430,12 +1475,22 @@ h3 {
   }
 
   .nav-shell {
-    min-height: 4.25rem;
+    min-height: 4.5rem;
   }
 
-  .brand-logo {
-    width: 3.75rem;
-    height: 3.75rem;
+  .brand-mark {
+    width: 2.7rem;
+    height: 2.7rem;
+  }
+
+  .brand-name-primary {
+    font-size: 1.15rem;
+    letter-spacing: 0.15em;
+  }
+
+  .brand-name-secondary {
+    font-size: 0.63rem;
+    letter-spacing: 0.38em;
   }
 
   .hero {
