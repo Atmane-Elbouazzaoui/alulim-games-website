@@ -18,24 +18,19 @@ Static site served by GitHub Pages. No build step: edit the HTML and push.
   full-bleed square: iOS applies its own mask and would otherwise round it twice.
 - `assets/og-alulim.png` — 1200×630 social card for every page except the game page
 - `site.webmanifest` — names the 192/512 icons for Android and installed-PWA use
-- `assets/bills-due-cover.jpg` — web-optimised export of the approved Bills Due app artwork
-- `assets/bills-due-gameplay.png` — retained landscape capture from the actual game build
-- `assets/bills-due-action.png` — supplied transparent landscape action capture
-- `assets/bills-due-payday.png` — supplied transparent landscape coin-filled action capture
-- `assets/bills-due-frontend.png` — supplied transparent landscape obligation and upgrades capture
+- `assets/bills-due-hero.jpg` — web-optimised 1024×500 Amazon promotional art used above the fold
+- `assets/bills-due-social.jpg` — 1920×720 launch artwork used for Bills Due social previews
+- `assets/bills-due-{smash,bills,banks,cabinet}.jpg` — web-optimised official iOS and Amazon storefront frames used in the release gallery
 
-## Before submitting an app
+## Release maintenance
 
-1. Replace the placeholder contact address `support@alulimgames.com` everywhere,
-   or buy the domain and create the mailbox.
-2. Put the live privacy URL into the game's `AdvertisingConfig` asset. That value is
-   authored data, so changing it later needs a new build — set it once the final
-   domain is known.
-3. The privacy policy describes the app **as it ships with ads enabled**. Do not
-   publish an app whose behaviour differs from it.
+1. Keep the App Store and Amazon download URLs aligned with the live listings.
+2. Keep the in-game privacy URL aligned with `https://alulimgames.com/privacy.html`.
+3. The privacy policy distinguishes the ad-supported iOS edition from the ad-free
+   Amazon edition. Update it before shipping a build whose behaviour differs.
 
 ## Performance
 
 The site has no framework, build step, JavaScript, analytics, or remote font request.
-Navigation and FAQ disclosure use native HTML. The first action capture is preloaded;
-the remaining game captures load lazily below the fold.
+Navigation and FAQ disclosure use native HTML. The 213 KB hero is preloaded; the
+remaining release frames load lazily below the fold.
