@@ -100,7 +100,7 @@
           <p>Your progress &mdash; cash, upgrades, obligations, collection, bankruptcy history and your settings &mdash; is saved in a file inside the Game's own storage on your device. Alulim Games does not receive or upload a copy of that file, and we do not operate servers for the Game. Uninstalling the Game or clearing its data removes the copy on your device; a device backup or a transfer to a new device may still hold one, under the platform's own backup settings.</p>
           <p>Where a Game offers purchases, that same file also holds the following &mdash; the identifier from the moment the store's purchasing service is reachable, whether or not you have ever bought anything, and the rest once you have:</p>
           <ul>
-            <li>an app-specific, obfuscated Amazon customer identifier &mdash; a different value for the same person in every app, which we use only to keep purchases with the account that paid for them;</li>
+            <li>on the Amazon Appstore only, an app-specific, obfuscated Amazon customer identifier &mdash; a different value for the same person in every app, which we use only to keep purchases with the account that paid for them. Apple provides apps with no equivalent identifier, so on iOS none is received or stored;</li>
             <li>which entitlements you own;</li>
             <li>store receipt identifiers for entitlements you own, and identifiers for receipts the store has since reported as cancelled, revoked or refunded, so a refunded purchase is not granted again.</li>
           </ul>
@@ -108,7 +108,7 @@
           <p>Where a Game shows advertising, it also stores a small file recording how recently you were shown an advertisement, so it can avoid showing you too many. It contains no identifiers and never leaves your device.</p>
 
           <h2 id="advertising">3. Advertising</h2>
-          <p>Our iOS games on the Apple App Store show advertisements, including optional rewarded advertisements you may choose to watch for an in-game bonus. Watching them is never required to play or to progress. Our games on the Amazon Appstore are ad-free and do not include the advertising SDK described below.</p>
+          <p>Our iOS games on the Apple App Store show advertisements between runs. We do not currently offer rewarded advertisements, and watching an advertisement is never required to play, to progress or to unlock anything. Buying any in-app purchase removes the advertisements shown between runs. Our games on the Amazon Appstore are ad-free and do not include the advertising SDK described below.</p>
           <p>We use <strong>Unity LevelPlay (ironSource)</strong> as our advertising mediation partner, which may serve advertisements from other advertising networks. For advertising to work, these partners may collect and process:</p>
           <ul>
             <li>your device's advertising identifier (IDFA on iOS);</li>
@@ -119,8 +119,8 @@
           <p>We do not receive your advertising identifier ourselves, and we do not combine advertising data with anything else. See the <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" rel="noopener">Unity/ironSource privacy policy</a>.</p>
 
           <h2 id="purchases">4. In-app purchases</h2>
-          <p>Some of our games offer optional permanent unlocks. They are one-off purchases, not subscriptions and not consumable currency, and a Game that offers them is fully playable without them. Our games on the Amazon Appstore offer them today; our iOS games on the Apple App Store do not.</p>
-          <p>Purchases are processed entirely by the store you downloaded the Game from &mdash; on the Amazon Appstore, by <strong>Amazon</strong> through Amazon Appstore In-App Purchasing. Amazon operates the purchase screen, takes the payment, keeps the transaction record, and &mdash; where a purchase is requested from an Amazon child profile &mdash; sends the request to a parent for approval. Amazon's handling of that data is governed by Amazon's own privacy notice.</p>
+          <p>Some of our games offer optional permanent unlocks. They are one-off purchases, not subscriptions and not consumable currency, and a Game that offers them is fully playable without them. Our games on both the Amazon Appstore and the Apple App Store offer them.</p>
+          <p>Purchases are processed entirely by the store you downloaded the Game from &mdash; on the Amazon Appstore by <strong>Amazon</strong> through Amazon Appstore In-App Purchasing, and on the Apple App Store by <strong>Apple</strong> through the App Store. The store operates the purchase screen, takes the payment, keeps the transaction record, and &mdash; where a purchase is requested from a child account, whether an Amazon child profile or Apple's Ask to Buy &mdash; sends the request to a parent for approval, unlocking nothing until they answer. Amazon's handling of that data is governed by Amazon's own privacy notice.</p>
           <p><strong>We never see your payment details.</strong> Alulim Games does not receive your name, email address, card number or bank details. What the Game receives from Amazon is the app-specific identifier and the receipts described above, and what it sends back to Amazon is a receipt identifier confirming an item was delivered.</p>
           <p>Amazon's software also makes your marketplace and country of residence available to the Game alongside that identifier. The Game does not read or store either of them.</p>
           
