@@ -23,6 +23,30 @@
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
   <link rel="manifest" href="site.webmanifest" />
   <link rel="stylesheet" href="css/style.css" />
+
+  <link rel="alternate" hreflang="en" href="https://alulimgames.com/privacy.html">
+  <link rel="alternate" hreflang="de" href="https://alulimgames.com/privacy.de.html">
+  <link rel="alternate" hreflang="es" href="https://alulimgames.com/privacy.es.html">
+  <link rel="alternate" hreflang="fr" href="https://alulimgames.com/privacy.fr.html">
+  <link rel="alternate" hreflang="x-default" href="https://alulimgames.com/privacy.html">
+
+  <script>
+  (function () {
+    // Only from the canonical English page, only once, and never when the visitor has
+    // chosen a language explicitly. ?lang= on every switcher link is what makes the
+    // choice stick, so nobody can be bounced away from the page they asked for.
+    try {
+      if (new URLSearchParams(location.search).has('lang')) { return; }
+      if (sessionStorage.getItem('privacyLangRedirected')) { return; }
+      var lang = (navigator.language || '').slice(0, 2).toLowerCase();
+      var pages = { de: 'privacy.de.html', es: 'privacy.es.html', fr: 'privacy.fr.html' };
+      if (pages[lang]) {
+        sessionStorage.setItem('privacyLangRedirected', '1');
+        location.replace(pages[lang] + '?lang=' + lang);
+      }
+    } catch (e) { /* English stays served if anything here fails */ }
+  })();
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -60,6 +84,7 @@
       <div class="shell">
         <span class="eyebrow reveal">Legal / Plain language</span>
         <h1 class="reveal reveal-delay-1">Privacy policy.</h1>
+          <p class="lang-switch" style="margin:0 0 1.25rem 0;font-size:.9rem"><a href="privacy.html?lang=en">English</a> · <a href="privacy.de.html?lang=de">Deutsch</a> · <a href="privacy.es.html?lang=es">Español</a> · <a href="privacy.fr.html?lang=fr">Français</a></p>
         <p class="reveal reveal-delay-2">How we handle your information when you play our games.</p>
       </div>
     </section>
