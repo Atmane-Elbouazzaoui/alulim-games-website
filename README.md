@@ -3,7 +3,7 @@
 Static site served by GitHub Pages. No build step: edit the HTML and push.
 
 - `index.html` — studio landing
-- `bills-due.html` — game page for *Bills Due: Smash to Pay*
+- `bills-due.html` — game page for *Bills Due: Piggy Bank Smash*
 - `privacy.html` — privacy policy (required by both app stores)
 - `support.html` — support page (Apple requires a reachable support URL)
 - `terms.html` — terms of use
