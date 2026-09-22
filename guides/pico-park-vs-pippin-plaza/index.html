@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PICO PARK vs Pippin Plaza: Co-op Gameplay Compared</title>
+  <meta name="description" content="PICO PARK and Pippin Plaza are both 2D cooperative puzzle platformers, but they run on different hardware and support different group sizes. A factual, source-linked comparison of platforms, player counts, modes, solo play and pricing." />
+  <meta name="theme-color" content="#F3EEE4" />
+  <link rel="canonical" href="https://alulimgames.com/guides/pico-park-vs-pippin-plaza/" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Alulim Games" />
+  <meta property="og:locale" content="en" />
+  <meta property="og:url" content="https://alulimgames.com/guides/pico-park-vs-pippin-plaza/" />
+  <meta property="og:title" content="PICO PARK vs Pippin Plaza: Co-op Gameplay Compared" />
+  <meta property="og:description" content="PICO PARK and Pippin Plaza are both 2D cooperative puzzle platformers, but they run on different hardware and support different group sizes. A factual, source-linked comparison of platforms, player counts, modes, solo play and pricing." />
+  <meta property="og:image" content="https://alulimgames.com/assets/pippin-plaza-coop-1200x630.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Four Pippin characters cooperating on a key-and-door puzzle in a 2D side-on level of Pippin Plaza" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <style>
+    /* The site's .page-hero h1 is tuned for short titles ("Privacy policy.").
+       Editorial headlines are full sentences, and at clamp(3.8rem,9vw,8rem)
+       they ran to five lines / 627px tall at 1440x900, filling the viewport
+       before a single word of the article. Same typeface and uppercase
+       treatment, sized for sentences. */
+    .page-hero h1 { max-width: 26ch; font-size: clamp(1.9rem, 3.4vw, 3.1rem); }
+    .guide-body .prose { max-width: none; }
+    .guide-body .prose > p,
+    .guide-body .prose > ul,
+    .guide-body .prose > ol,
+    .guide-body .prose > h2,
+    .guide-body .prose > h3,
+    .guide-body .faq { max-width: 49rem; }
+    .draft-gate { padding: .8rem 1rem; background: #7b1d1d; color: #fff; font: 700 .75rem/1.4 var(--mono); letter-spacing: .06em; text-align: center; text-transform: uppercase; }
+    .guide-meta { display: flex; flex-wrap: wrap; gap: .6rem 1.5rem; margin-top: 1.75rem; color: var(--ink-soft); font: 700 .72rem/1.4 var(--mono); letter-spacing: .08em; text-transform: uppercase; }
+    .crumbs { padding: 1rem 0 0; font: 500 .8rem/1.5 var(--mono); }
+    .crumbs ol { display: flex; flex-wrap: wrap; gap: .4rem; margin: 0; padding: 0; list-style: none; }
+    .crumbs li + li::before { margin-right: .4rem; color: var(--ink-soft); content: "/"; }
+    .crumbs a { color: var(--lapis-dark); }
+    .crumbs [aria-current="page"] { color: var(--ink-soft); }
+    .langbar { display: flex; flex-wrap: wrap; align-items: baseline; gap: .35rem .75rem; margin: 1.25rem 0 0; padding: .75rem 0 0; border-top: 1px solid var(--line); font: 500 .8rem/1.5 var(--mono); }
+    .langbar b { color: var(--ink-soft); font-weight: 700; }
+    .langbar a { color: var(--lapis-dark); text-decoration: none; }
+    .langbar a:hover { text-decoration: underline; }
+    .langbar span[aria-current] { color: var(--clay); font-weight: 700; }
+    .answer-box { margin: 2.5rem 0; padding: clamp(1.4rem, 4vw, 2.4rem); border-left: .4rem solid var(--clay); background: var(--paper-light); box-shadow: var(--shadow); }
+    .answer-box h2 { margin-top: 0; }
+    .answer-box p:last-child { margin-bottom: 0; }
+    .answer-box code { padding: .1rem .35rem; background: var(--paper-deep); border-radius: .2rem; font-size: .92em; }
+    .table-wrap { overflow-x: auto; margin: 2rem 0; }
+    .compare { width: 100%; min-width: 60rem; border-collapse: collapse; font-size: .86rem; }
+    .compare caption { margin-bottom: .9rem; color: var(--ink-soft); font-size: .85rem; text-align: left; }
+    .compare th { padding: .85rem .7rem; background: var(--paper-deep); border-bottom: 2px solid var(--line); color: var(--ink-soft); font: 700 .72rem/1.35 var(--mono); letter-spacing: .04em; text-transform: uppercase; text-align: left; vertical-align: bottom; }
+    .compare td { padding: 1rem .7rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+    .compare tbody tr:hover td { background: var(--paper-light); }
+    .compare .is-ours td { background: rgba(223, 94, 46, .07); }
+    .compare .is-ours:hover td { background: rgba(223, 94, 46, .12); }
+    .badge { display: inline-block; padding: .2rem .5rem; border-radius: .2rem; font: 700 .68rem/1.4 var(--mono); }
+    .b-very-close { background: #dff0d8; color: #2f5d33; }
+    .b-close { background: #d9edf7; color: #275b70; }
+    .b-close-3d { background: #fcf8e3; color: #7a5f2e; }
+    .b-partial { background: #f2dede; color: #8f3a38; }
+    .b-adjacent { background: #ececec; color: #383838; }
+    .money-note { margin: 1.5rem 0 0; padding: 1.1rem 1.3rem; border: 1px dashed var(--clay); border-radius: .3rem; background: var(--paper-light); font-size: .92rem; }
+    .pick { margin: 1.6rem 0; padding: 1.4rem 1.5rem; border: 1px solid var(--line); border-radius: .3rem; background: var(--paper-light); }
+    .pick.is-ours { border-color: var(--clay); background: #fff; box-shadow: var(--shadow); }
+    .pick h3 { margin: .1rem 0 .6rem; }
+    .pick .seller { display: block; margin-bottom: .7rem; color: var(--ink-soft); font: 500 .78rem/1.4 var(--mono); }
+    .pick .verdict { margin-bottom: 0; }
+    .pick-index { color: var(--clay); font: 700 .72rem/1.4 var(--mono); letter-spacing: .06em; }
+    .chooser { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: .92rem; }
+    .chooser th { padding: .8rem .7rem; background: var(--paper-deep); border-bottom: 2px solid var(--line); color: var(--ink-soft); font: 700 .72rem/1.35 var(--mono); letter-spacing: .04em; text-transform: uppercase; text-align: left; }
+    .chooser td { padding: .95rem .7rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+    .chooser td:nth-child(2) { font-weight: 700; }
+    .shot { margin: 2rem 0; }
+    .shot img { width: 100%; height: auto; border: 1px solid var(--line); border-radius: .3rem; box-shadow: var(--shadow); }
+    .shot figcaption { margin-top: .7rem; color: var(--ink-soft); font: 400 .82rem/1.5 var(--mono); }
+    .faq h3 { margin-bottom: .4rem; }
+    .cta { margin: 3.5rem 0 1rem; padding: clamp(1.8rem, 5vw, 3.2rem); border-radius: .4rem; background: var(--clay); color: #fff; text-align: center; }
+    .cta h2 { margin-top: 0; color: #fff; }
+    .cta p { max-width: 42rem; margin: 0 auto 2rem; color: #fff; opacity: .92; }
+    .cta-actions { display: flex; flex-wrap: wrap; gap: .8rem; justify-content: center; }
+    .cta .button { background: var(--paper); color: var(--clay); }
+    .cta .button-ghost { display: inline-flex; align-items: center; padding: .85rem 1.7rem; border: 1px solid rgba(255,255,255,.45); border-radius: .2rem; color: #fff; font: 700 .82rem/1.4 var(--mono); letter-spacing: .05em; text-transform: uppercase; text-decoration: none; }
+    .cta .button-ghost:hover { background: rgba(255,255,255,.12); }
+    @media (max-width: 680px) { .compare { min-width: 48rem; } }
+
+    .vs table.compare { min-width: 44rem; }
+    .vs .compare th[scope="row"] { width: 26%; background: var(--paper-deep); color: var(--ink); font-family: var(--body); font-size: .9rem; letter-spacing: 0; text-transform: none; }
+    .vs .compare thead th { font-size: .8rem; }
+    .vs .compare td { width: 37%; }
+    .strengths { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr)); margin: 1.5rem 0; max-width: none; }
+    .strengths section { padding: 1.4rem 1.5rem; border: 1px solid var(--line); border-radius: .3rem; background: var(--paper-light); }
+    .strengths h3 { margin: 0 0 .8rem; }
+    .strengths ul { margin: 0; padding-left: 1.1rem; }
+    .strengths li { margin-bottom: .7rem; }
+    .strengths li:last-child { margin-bottom: 0; }
+  </style>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://alulimgames.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Guides",
+      "item": "https://alulimgames.com/guides/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "PICO PARK vs Pippin Plaza"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "PICO PARK vs Pippin Plaza: Co-op Gameplay Compared",
+  "description": "PICO PARK and Pippin Plaza are both 2D cooperative puzzle platformers, but they run on different hardware and support different group sizes. A factual, source-linked comparison of platforms, player counts, modes, solo play and pricing.",
+  "inLanguage": "en",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://alulimgames.com/guides/pico-park-vs-pippin-plaza/"
+  },
+  "url": "https://alulimgames.com/guides/pico-park-vs-pippin-plaza/",
+  "image": "https://alulimgames.com/assets/pippin-plaza-coop-1200x630.jpg",
+  "datePublished": "2026-09-22",
+  "dateModified": "2026-09-22",
+  "author": {
+    "@type": "Organization",
+    "name": "Alulim Games",
+    "url": "https://alulimgames.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Alulim Games",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://alulimgames.com/assets/alulim-emblem.png"
+    }
+  },
+  "about": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "PICO PARK",
+      "applicationCategory": "GameApplication",
+      "operatingSystem": "Nintendo Switch, Windows",
+      "url": "https://picoparkgame.com/en/pp1/"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Pippin Plaza: Online Co-op",
+      "applicationCategory": "GameApplication",
+      "operatingSystem": "iOS",
+      "url": "https://apps.apple.com/us/app/pippin-plaza-online-co-op/id6787434739"
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="shell nav-shell">
+      <a class="brand" href="/" aria-label="Alulim Games home">
+        <img class="brand-mark" src="/assets/alulim-emblem.png" alt="" width="224" height="224" />
+        <span class="brand-name" aria-hidden="true">
+          <span class="brand-name-primary">Alulim</span>
+          <span class="brand-name-secondary">Games</span>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="/#games">Games</a>
+        <a href="/#studio">Studio</a>
+        <a href="/guides/">Guides</a>
+        <a href="/support.html">Support</a>
+      </nav>
+      <a class="header-contact" href="mailto:support@alulimgames.com">Contact us</a>
+      <details class="mobile-nav">
+        <summary aria-label="Open navigation"><span class="menu-icon" aria-hidden="true"></span></summary>
+        <nav class="mobile-panel" aria-label="Mobile navigation">
+          <a href="/#games">Games</a>
+          <a href="/#studio">Studio</a>
+          <a href="/guides/" aria-current="page">Guides</a>
+          <a href="/support.html">Support</a>
+          <a href="mailto:support@alulimgames.com">Contact us</a>
+        </nav>
+      </details>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="shell">
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="/">Home</a></li>
+            <li><a href="/guides/">Guides</a></li>
+            <li><span aria-current="page">PICO PARK vs Pippin Plaza</span></li>
+          </ol>
+        </nav>
+        <span class="eyebrow reveal">Editorial / Comparison</span>
+        <h1 class="reveal reveal-delay-1">PICO PARK vs Pippin Plaza: how the two co-op puzzle games differ</h1>
+        <p class="reveal reveal-delay-2">Both are 2D side-on cooperative puzzle platformers built on keys, doors and timing. They are not the same game, they are not from the same studio, and they do not run on the same hardware. Here is what actually separates them.</p>
+        <div class="guide-meta">
+          <span>By Alulim Games</span>
+          <span>Verified: <time datetime="2026-09-22">2026-09-22</time></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="guide-body vs">
+      <div class="shell">
+        <div class="prose">
+        <p><strong>Disclosure:</strong> Alulim Games publishes Pippin Plaza. PICO PARK is developed and published independently by TECOPARK. This comparison applies the same factual criteria to both games and links to first-party sources for every claim. We do not name a winner, because which game you can play is decided mostly by the hardware you own.</p>
+        <p><strong>Non-affiliation:</strong> PICO PARK and TECOPARK are the property of their respective owners and are named here only to identify the games being compared. Alulim Games and Pippin Plaza are not affiliated with, endorsed by, sponsored by, or licensed from TECOPARK. Pippin Plaza is not an official PICO PARK product or port.</p>
+
+        <div class="answer-box">
+          <h2 id="short-answer">The short answer</h2>
+          <p>PICO PARK is a 2–8 player cooperative puzzle game from TECOPARK, released on June 8, 2019 for <strong>Nintendo Switch / Steam</strong>. It supports both online and local same-screen play, and it needs at least two people.</p>
+          <p>Pippin Plaza is a native <strong>iPhone and iPad</strong> cooperative puzzle platformer from Alulim Games, with online co-op for <strong>2 to 4 players</strong> over a private room code, and a solo route where one player controls two Pippins.</p>
+          <p>The practical difference: <strong>PICO PARK has no native iPhone or iPad version</strong>, and Pippin Plaza runs on nothing else. If you own a PC or a Switch, PICO PARK is available to you and supports twice as many players. If you want to play on a phone, or play alone, it is not.</p>
+        </div>
+
+        <h2 id="which-pico-park">Which PICO PARK do you mean?</h2>
+        <p>The name now covers three separate games with three separate platform lists. Mixing them up is the single most common error in write-ups on this topic, so this page is explicit: <strong>the comparison below uses the original PICO PARK (2019)</strong> unless a row says otherwise.</p>
+        <h3>They are not the same game, and not from the same studio.</h3>
+        <p>Pippin Plaza is not an official PICO PARK product, is not a PICO PARK port, and is not made by or licensed from TECOPARK. The two share a genre — 2D side-on cooperative puzzle-platforming built on keys, doors and timing — not a lineage.</p>
+        <h3>“PICO PARK” now means three different games.</h3>
+        <p>The original PICO PARK (2019) lists Nintendo Switch and Steam, and its own page states cross-play is not supported. PICO PARK 2 (August 28, 2024) lists Steam, Switch, Xbox and Windows and does support cross-play. SONIC PICO PARK is dated November 12, 2026 for seven platforms. None of the three lists a native iPhone or iPad version. This page compares the original unless it says otherwise.</p>
+        <h3>TecoGamePad is not PICO PARK on your phone.</h3>
+        <p>TECOPARK publishes a free companion app that turns a phone into a gamepad for a supported computer version over the same local network. The game still runs on the computer.</p>
+
+        <h2 id="comparison">Side by side</h2>
+        <div class="table-wrap" role="region" aria-label="Feature comparison of PICO PARK and Pippin Plaza" tabindex="0">
+          <table class="compare">
+            <caption>PICO PARK (original, 2019) compared with Pippin Plaza. Values are factual, not scores. Verified 2026-09-22 against the sources listed at the end.</caption>
+            <thead>
+              <tr>
+                <th scope="col">Feature</th>
+                <th scope="col"><a href="https://picoparkgame.com/en/pp1/" rel="noopener">PICO PARK</a></th>
+                <th scope="col"><a href="https://apps.apple.com/us/app/pippin-plaza-online-co-op/id6787434739" rel="noopener">Pippin Plaza</a></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Developer / publisher</th>
+                <td>TECOPARK</td>
+                <td>Alulim Games</td>
+              </tr>
+              <tr>
+                <th scope="row">Released</th>
+                <td>June 8, 2019</td>
+                <td>September 1, 2026</td>
+              </tr>
+              <tr>
+                <th scope="row">Platforms</th>
+                <td>Nintendo Switch / Steam</td>
+                <td>iPhone and iPad</td>
+              </tr>
+              <tr>
+                <th scope="row">Native iPhone / iPad version</th>
+                <td>No</td>
+                <td>Yes — requires iOS 16 or later</td>
+              </tr>
+              <tr>
+                <th scope="row">Supported players</th>
+                <td>2–8</td>
+                <td>1 solo, or 2–4 online</td>
+              </tr>
+              <tr>
+                <th scope="row">Minimum players needed</th>
+                <td>2 — it cannot be played alone</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <th scope="row">Online co-op</th>
+                <td>Yes</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <th scope="row">Local same-device co-op</th>
+                <td>Yes — shared / split screen</td>
+                <td>No</td>
+              </tr>
+              <tr>
+                <th scope="row">Cross-play</th>
+                <td>Not supported in the original PICO PARK</td>
+                <td>Not applicable — one platform</td>
+              </tr>
+              <tr>
+                <th scope="row">How you get into a session</th>
+                <td>Steam or Nintendo Switch lobbies and invites</td>
+                <td>Create a private room, share the code</td>
+              </tr>
+              <tr>
+                <th scope="row">View</th>
+                <td>2D side-on</td>
+                <td>2D side-on</td>
+              </tr>
+              <tr>
+                <th scope="row">Level structure</th>
+                <td>48 levels</td>
+                <td>53 numbered handmade quests, plus a separate tutorial</td>
+              </tr>
+              <tr>
+                <th scope="row">Levels adapt to the number of players</th>
+                <td>Yes — terrain changes with player count</td>
+                <td>No — quests are fixed designs</td>
+              </tr>
+              <tr>
+                <th scope="row">Modes</th>
+                <td>World, Battle, Endless</td>
+                <td>Quest campaign, Rush, Survival, Marathon</td>
+              </tr>
+              <tr>
+                <th scope="row">Competitive mode</th>
+                <td>Yes — Battle mode</td>
+                <td>No — co-op and solo only</td>
+              </tr>
+              <tr>
+                <th scope="row">Solo play</th>
+                <td>No</td>
+                <td>Yes — you control two Pippins, switching between them</td>
+              </tr>
+              <tr>
+                <th scope="row">Built for touch controls</th>
+                <td>No — gamepad or keyboard</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <th scope="row">Price</th>
+                <td>Paid — US$4.99 on Steam at verification</td>
+                <td>Free to download</td>
+              </tr>
+              <tr>
+                <th scope="row">Ads</th>
+                <td>None</td>
+                <td>Yes — an optional purchase removes the automatic ones</td>
+              </tr>
+              <tr>
+                <th scope="row">In-app purchases</th>
+                <td>No</td>
+                <td>Yes, optional. No subscriptions</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 id="strengths">What each one does better</h2>
+        <p>Neither game is a replacement for the other, and each has things the other cannot do. Both lists below are drawn from the same table.</p>
+        <div class="strengths">
+          <section>
+            <h3>Where PICO PARK is stronger</h3>
+            <ul>
+          <li><strong>Up to 8 players.</strong> PICO PARK supports 2–8 players. Pippin Plaza&#x27;s online co-op tops out at 4.</li>
+          <li><strong>Local multiplayer on one screen.</strong> PICO PARK is listed on Steam with shared / split screen co-op. Pippin Plaza has no same-device co-op mode at all — its co-op is online only.</li>
+          <li><strong>Levels reshape themselves around your group.</strong> TECOPARK&#x27;s page states each level adjusts its terrain for the total number of players. Pippin Plaza&#x27;s quests are fixed designs.</li>
+          <li><strong>A competitive mode.</strong> Battle mode lets the same group stop cooperating and play against each other. Pippin Plaza has no competitive mode.</li>
+          <li><strong>No ads and no in-app purchases.</strong> PICO PARK is a paid game, so nothing is monetised after the purchase. Pippin Plaza is free and shows ads.</li>
+          <li><strong>Long-established release.</strong> The original PICO PARK launched on June 8, 2019, more than seven years before Pippin Plaza&#x27;s release on September 1, 2026.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Where Pippin Plaza is stronger</h3>
+            <ul>
+          <li><strong>It runs on an iPhone.</strong> This is the whole reason people arrive at this comparison. TECOPARK&#x27;s official pages list no native iPhone or iPad release for any PICO PARK title.</li>
+          <li><strong>You can play it alone.</strong> PICO PARK needs at least two people. Pippin Plaza&#x27;s quest campaign can be played solo by controlling two Pippins and switching between them.</li>
+          <li><strong>Free to download.</strong> No purchase is needed to start. PICO PARK was US$4.99 on the U.S. Steam storefront when we checked on September 22, 2026, plus the hardware to run it.</li>
+          <li><strong>Designed for touch from the start.</strong> Pippin Plaza&#x27;s controls are built for a phone screen. PICO PARK is played with a gamepad or keyboard.</li>
+          <li><strong>Joining is a room code.</strong> Share a six-character code and friends are in — no store platform, no friends list, no console required.</li>
+          <li><strong>More separate modes outside the campaign.</strong> Rush, Survival and Marathon sit alongside the 53-quest campaign.</li>
+            </ul>
+          </section>
+        </div>
+
+        <h2 id="how-pippin-works">How Pippin Plaza's co-op actually works</h2>
+        <p>This is the part we can describe from the inside rather than from a store listing, so it is worth being specific.</p>
+        <p><strong>Getting into a session.</strong> One player creates a private room and gets a six-character code. Everyone else enters that code. There is no friends list, no platform account and no matchmaking queue — the code is the whole mechanism, which is why it works across households as easily as across a table.</p>
+        <p><strong>Two to four players.</strong> Everyone plays on their own device in real time. The quests are built so each player contributes: keys have to be carried, doors have to be held, platforms need weight on them. A four-player room is not a two-player room with spectators.</p>
+        <p><strong>Playing alone.</strong> The quest campaign does not lock you out without a partner. You control two Pippins and switch between them when a puzzle needs both characters in different places. You are not driving both at the same time — you move one, position it, then take over the other. This is the clearest functional difference from PICO PARK, which cannot be started with fewer than two players.</p>
+        <p><strong>Beyond the campaign.</strong> The 53 numbered quests and the tutorial are the main route. Rush, Survival and Marathon are separate modes with their own pacing.</p>
+
+        <figure class="shot">
+          <picture>
+            <source srcset="/assets/pippin-plaza-coop-1200x630.webp" type="image/webp" width="1200" height="630" />
+            <img src="/assets/pippin-plaza-coop-1200x630.jpg" width="1200" height="630"
+                 alt="Four Pippin characters cooperating on a key-and-door puzzle in a 2D side-on level of Pippin Plaza" loading="lazy" decoding="async" />
+          </picture>
+          <figcaption>Pippin Plaza, four players in one quest. Screenshot by Alulim Games. No PICO PARK imagery is used anywhere on this page.</figcaption>
+        </figure>
+
+        <div class="faq">
+          <h2 id="faq">Direct answers</h2>
+        <h3>Is Pippin Plaza an official PICO PARK game?</h3>
+        <p>No. Pippin Plaza is published by Alulim Games and has no affiliation with, licence from, or endorsement by TECOPARK.</p>
+        <h3>Is Pippin Plaza made by TECOPARK?</h3>
+        <p>No. TECOPARK develops PICO PARK, PICO PARK 2 and SONIC PICO PARK. Pippin Plaza is a separate game from a separate developer.</p>
+        <h3>Can I play PICO PARK natively on iPhone?</h3>
+        <p>No. As of September 22, 2026, TECOPARK&#x27;s official pages list Nintendo Switch and Steam for PICO PARK, and no iPhone or iPad version for it, PICO PARK 2 or SONIC PICO PARK.</p>
+        <h3>Can I play Pippin Plaza natively on iPhone?</h3>
+        <p>Yes. It is a native iPhone and iPad game and requires iOS 16 or later.</p>
+        <h3>Does Pippin Plaza support online multiplayer?</h3>
+        <p>Yes, for 2 to 4 players. You create a private room and share its code; everyone plays on their own device in real time.</p>
+        <h3>Can Pippin Plaza be played solo?</h3>
+        <p>Yes. One player can work through the quest campaign by controlling two Pippins and switching between them when a puzzle needs both. PICO PARK requires at least two players.</p>
+        <h3>Are the two games identical?</h3>
+        <p>No. PICO PARK supports 2–8 players, has local same-screen co-op, adapts each level&#x27;s terrain to the player count and includes a competitive Battle mode — none of which Pippin Plaza does. Pippin Plaza runs natively on iPhone and iPad, can be played solo, is free to download and is built for touch — none of which applies to PICO PARK.</p>
+        <h3>Which one should I play?</h3>
+        <p>That depends on hardware more than preference. If you have a PC or a Switch and two to eight people, PICO PARK is the game this genre is named after. If you want to play on an iPhone or iPad, or you want to play alone, PICO PARK is not available to you and Pippin Plaza is.</p>
+        </div>
+
+        <h2 id="related">If you are actually shopping for an iPhone game</h2>
+        <p>This page compares two specific games. If the real question is what else is worth installing, we compared nine native iOS cooperative puzzle games — including both of the ones above where applicable — on player count, online play, solo modes and pricing. See the broader guide to <a href="/guides/games-like-pico-park-iphone/">co-op puzzle games on iPhone for PICO PARK players</a>.</p>
+
+        <h2 id="sources">Primary sources</h2>
+        <p>Every factual claim on this page traces to one of these, all checked on 2026-09-22.</p>
+        <ul>
+          <li><a href="https://picoparkgame.com/en/pp1/" rel="noopener">PICO PARK — official page</a> (platforms, player count, level count, modes, release date, cross-play status)</li>
+          <li><a href="https://store.steampowered.com/app/1509960/PICO_PARK/" rel="noopener">PICO PARK on Steam</a> (current price, online and shared-screen co-op categories)</li>
+          <li><a href="https://picoparkgame.com/en/pp2/" rel="noopener">PICO PARK 2 — official page</a> (separate platform list and cross-play)</li>
+          <li><a href="https://picoparkgame.com/en/spp/" rel="noopener">SONIC PICO PARK — official page</a> (seven platforms, November 12, 2026)</li>
+          <li><a href="https://apps.apple.com/us/app/tecogamepad/id1080510485" rel="noopener">TecoGamePad — App Store</a> (companion controller app)</li>
+          <li><a href="https://apps.apple.com/us/app/pippin-plaza-online-co-op/id6787434739" rel="noopener">Pippin Plaza: Online Co-op — App Store</a> (platforms, players, modes, pricing, iOS requirement)</li>
+        </ul>
+        <p>Store pages change. If something here is out of date, tell us at <a href="mailto:support@alulimgames.com">support@alulimgames.com</a>.</p>
+
+        <div class="cta">
+          <h2>Pippin Plaza on iPhone and iPad</h2>
+          <p>Free to download. 53 handmade quests plus a tutorial, online co-op for 2 to 4 players over a private room code, or solo by controlling two Pippins.</p>
+          <div class="cta-actions">
+            <a class="button" href="https://apps.apple.com/us/app/pippin-plaza-online-co-op/id6787434739" rel="noopener">View Pippin Plaza on the App Store</a>
+            <a class="button-ghost" href="/guides/games-like-pico-park-iphone/">Compare nine iPhone co-op games</a>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="/" aria-label="Alulim Games home">
+            <img class="brand-mark" src="/assets/alulim-emblem-light.png" alt="" width="224" height="224" loading="lazy" />
+            <span class="brand-name" aria-hidden="true">
+              <span class="brand-name-primary">Alulim</span>
+              <span class="brand-name-secondary">Games</span>
+            </span>
+          </a>
+          <p class="footer-intro">Independent games about systems you can feel—made with care for players who enjoy figuring things out.</p>
+        </div>
+        <div class="footer-group">
+          <h2>Explore</h2>
+          <nav aria-label="Explore">
+            <a href="/guides/">Guides</a>
+            <a href="https://pippinplaza.com/" rel="noopener">Pippin Plaza</a>
+            <a href="/bills-due.html">Bills Due</a>
+            <a href="/support.html">Support</a>
+          </nav>
+        </div>
+        <div class="footer-group">
+          <h2>Legal</h2>
+          <nav aria-label="Legal">
+            <a href="/privacy.html">Privacy policy</a>
+            <a href="/terms.html">Terms of use</a>
+            <a href="mailto:support@alulimgames.com">Contact</a>
+          </nav>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Alulim Games. All rights reserved.</p>
+        <p>Independent / Mobile / Made with intent</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
