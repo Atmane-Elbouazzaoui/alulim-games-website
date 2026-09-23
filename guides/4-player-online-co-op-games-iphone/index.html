@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>4-Player Online Co-op Games on iPhone</title>
+  <meta name="description" content="Which iPhone and iPad games let four people play together online, not on one shared screen? We checked every candidate against its App Store listing and separated real 4-player online co-op from local-only, 2-player and no-multiplayer games." />
+  <meta name="theme-color" content="#F3EEE4" />
+  <link rel="canonical" href="https://alulimgames.com/guides/4-player-online-co-op-games-iphone/" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Alulim Games" />
+  <meta property="og:locale" content="en" />
+  <meta property="og:url" content="https://alulimgames.com/guides/4-player-online-co-op-games-iphone/" />
+  <meta property="og:title" content="4-Player Online Co-op Games on iPhone" />
+  <meta property="og:description" content="Which iPhone and iPad games let four people play together online, not on one shared screen? We checked every candidate against its App Store listing and separated real 4-player online co-op from local-only, 2-player and no-multiplayer games." />
+  <meta property="og:image" content="https://alulimgames.com/assets/pippin-plaza-coop-1200x630.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Four Pippin characters cooperating on a key-and-door puzzle in a 2D side-on level of Pippin Plaza" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <style>
+    /* The site's .page-hero h1 is tuned for short titles ("Privacy policy.").
+       Editorial headlines are full sentences, and at clamp(3.8rem,9vw,8rem)
+       they ran to five lines / 627px tall at 1440x900, filling the viewport
+       before a single word of the article. Same typeface and uppercase
+       treatment, sized for sentences. */
+    .page-hero h1 { max-width: 26ch; font-size: clamp(1.9rem, 3.4vw, 3.1rem); }
+    .guide-body .prose { max-width: none; }
+    .guide-body .prose > p,
+    .guide-body .prose > ul,
+    .guide-body .prose > ol,
+    .guide-body .prose > h2,
+    .guide-body .prose > h3,
+    .guide-body .faq { max-width: 49rem; }
+    .draft-gate { padding: .8rem 1rem; background: #7b1d1d; color: #fff; font: 700 .75rem/1.4 var(--mono); letter-spacing: .06em; text-align: center; text-transform: uppercase; }
+    .guide-meta { display: flex; flex-wrap: wrap; gap: .6rem 1.5rem; margin-top: 1.75rem; color: var(--ink-soft); font: 700 .72rem/1.4 var(--mono); letter-spacing: .08em; text-transform: uppercase; }
+    .crumbs { padding: 1rem 0 0; font: 500 .8rem/1.5 var(--mono); }
+    .crumbs ol { display: flex; flex-wrap: wrap; gap: .4rem; margin: 0; padding: 0; list-style: none; }
+    .crumbs li + li::before { margin-right: .4rem; color: var(--ink-soft); content: "/"; }
+    .crumbs a { color: var(--lapis-dark); }
+    .crumbs [aria-current="page"] { color: var(--ink-soft); }
+    .langbar { display: flex; flex-wrap: wrap; align-items: baseline; gap: .35rem .75rem; margin: 1.25rem 0 0; padding: .75rem 0 0; border-top: 1px solid var(--line); font: 500 .8rem/1.5 var(--mono); }
+    .langbar b { color: var(--ink-soft); font-weight: 700; }
+    .langbar a { color: var(--lapis-dark); text-decoration: none; }
+    .langbar a:hover { text-decoration: underline; }
+    .langbar span[aria-current] { color: var(--clay); font-weight: 700; }
+    .answer-box { margin: 2.5rem 0; padding: clamp(1.4rem, 4vw, 2.4rem); border-left: .4rem solid var(--clay); background: var(--paper-light); box-shadow: var(--shadow); }
+    .answer-box h2 { margin-top: 0; }
+    .answer-box p:last-child { margin-bottom: 0; }
+    .answer-box code { padding: .1rem .35rem; background: var(--paper-deep); border-radius: .2rem; font-size: .92em; }
+    .table-wrap { overflow-x: auto; margin: 2rem 0; }
+    .compare { width: 100%; min-width: 60rem; border-collapse: collapse; font-size: .86rem; }
+    .compare caption { margin-bottom: .9rem; color: var(--ink-soft); font-size: .85rem; text-align: left; }
+    .compare th { padding: .85rem .7rem; background: var(--paper-deep); border-bottom: 2px solid var(--line); color: var(--ink-soft); font: 700 .72rem/1.35 var(--mono); letter-spacing: .04em; text-transform: uppercase; text-align: left; vertical-align: bottom; }
+    .compare td { padding: 1rem .7rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+    .compare tbody tr:hover td { background: var(--paper-light); }
+    .compare .is-ours td { background: rgba(223, 94, 46, .07); }
+    .compare .is-ours:hover td { background: rgba(223, 94, 46, .12); }
+    .badge { display: inline-block; padding: .2rem .5rem; border-radius: .2rem; font: 700 .68rem/1.4 var(--mono); }
+    .b-very-close { background: #dff0d8; color: #2f5d33; }
+    .b-close { background: #d9edf7; color: #275b70; }
+    .b-close-3d { background: #fcf8e3; color: #7a5f2e; }
+    .b-partial { background: #f2dede; color: #8f3a38; }
+    .b-adjacent { background: #ececec; color: #383838; }
+    .money-note { margin: 1.5rem 0 0; padding: 1.1rem 1.3rem; border: 1px dashed var(--clay); border-radius: .3rem; background: var(--paper-light); font-size: .92rem; }
+    .pick { margin: 1.6rem 0; padding: 1.4rem 1.5rem; border: 1px solid var(--line); border-radius: .3rem; background: var(--paper-light); }
+    .pick.is-ours { border-color: var(--clay); background: #fff; box-shadow: var(--shadow); }
+    .pick h3 { margin: .1rem 0 .6rem; }
+    .pick .seller { display: block; margin-bottom: .7rem; color: var(--ink-soft); font: 500 .78rem/1.4 var(--mono); }
+    .pick .verdict { margin-bottom: 0; }
+    .pick-index { color: var(--clay); font: 700 .72rem/1.4 var(--mono); letter-spacing: .06em; }
+    .chooser { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: .92rem; }
+    .chooser th { padding: .8rem .7rem; background: var(--paper-deep); border-bottom: 2px solid var(--line); color: var(--ink-soft); font: 700 .72rem/1.35 var(--mono); letter-spacing: .04em; text-transform: uppercase; text-align: left; }
+    .chooser td { padding: .95rem .7rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+    .chooser td:nth-child(2) { font-weight: 700; }
+    .shot { margin: 2rem 0; }
+    .shot img { width: 100%; height: auto; border: 1px solid var(--line); border-radius: .3rem; box-shadow: var(--shadow); }
+    .shot figcaption { margin-top: .7rem; color: var(--ink-soft); font: 400 .82rem/1.5 var(--mono); }
+    .faq h3 { margin-bottom: .4rem; }
+    .cta { margin: 3.5rem 0 1rem; padding: clamp(1.8rem, 5vw, 3.2rem); border-radius: .4rem; background: var(--clay); color: #fff; text-align: center; }
+    .cta h2 { margin-top: 0; color: #fff; }
+    .cta p { max-width: 42rem; margin: 0 auto 2rem; color: #fff; opacity: .92; }
+    .cta-actions { display: flex; flex-wrap: wrap; gap: .8rem; justify-content: center; }
+    .cta .button { background: var(--paper); color: var(--clay); }
+    .cta .button-ghost { display: inline-flex; align-items: center; padding: .85rem 1.7rem; border: 1px solid rgba(255,255,255,.45); border-radius: .2rem; color: #fff; font: 700 .82rem/1.4 var(--mono); letter-spacing: .05em; text-transform: uppercase; text-decoration: none; }
+    .cta .button-ghost:hover { background: rgba(255,255,255,.12); }
+    @media (max-width: 680px) { .compare { min-width: 48rem; } }
+
+    .fourp .compare { min-width: 62rem; }
+    .fourp .compare th[scope="row"] { width: 17%; background: var(--paper-deep); font-family: var(--body); font-size: .88rem; letter-spacing: 0; text-transform: none; }
+    .confuse .compare { min-width: 48rem; }
+    .confuse .compare th[scope="row"] { width: 22%; background: var(--paper-deep); font-family: var(--body); font-size: .88rem; letter-spacing: 0; text-transform: none; }
+    .confuse .compare td:first-of-type { width: 20%; }
+    .evidence { margin: .9rem 0 0; padding: .85rem 1.1rem; border-left: .25rem solid var(--line); background: var(--paper-deep); }
+    .evidence p { margin: 0 0 .4rem; font-style: italic; }
+    .evidence cite { color: var(--ink-soft); font: 500 .74rem/1.4 var(--mono); font-style: normal; }
+    .gap { color: var(--clay); }
+  </style>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://alulimgames.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Guides",
+      "item": "https://alulimgames.com/guides/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "4-player online co-op games on iPhone"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "4-Player Online Co-op Games on iPhone",
+  "description": "Which iPhone and iPad games let four people play together online, not on one shared screen? We checked every candidate against its App Store listing and separated real 4-player online co-op from local-only, 2-player and no-multiplayer games.",
+  "inLanguage": "en",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://alulimgames.com/guides/4-player-online-co-op-games-iphone/"
+  },
+  "url": "https://alulimgames.com/guides/4-player-online-co-op-games-iphone/",
+  "image": "https://alulimgames.com/assets/pippin-plaza-coop-1200x630.jpg",
+  "datePublished": "2026-09-23",
+  "dateModified": "2026-09-23",
+  "author": {
+    "@type": "Organization",
+    "name": "Alulim Games",
+    "url": "https://alulimgames.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Alulim Games",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://alulimgames.com/assets/alulim-emblem.png"
+    }
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "iPhone and iPad games with verified four-player online co-op",
+  "numberOfItems": 5,
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "Bloons TD 6",
+        "applicationCategory": "GameApplication",
+        "operatingSystem": "iOS",
+        "url": "https://apps.apple.com/us/app/bloons-td-6/id1118115766"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "Human: Fall Flat",
+        "applicationCategory": "GameApplication",
+        "operatingSystem": "iOS",
+        "url": "https://apps.apple.com/us/app/human-fall-flat/id1438091392"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "Minecraft: Play with Friends!",
+        "applicationCategory": "GameApplication",
+        "operatingSystem": "iOS",
+        "url": "https://apps.apple.com/us/app/minecraft/id479516143"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "Pippin Plaza: Online Co-op",
+        "applicationCategory": "GameApplication",
+        "operatingSystem": "iOS",
+        "url": "https://apps.apple.com/us/app/pippin-plaza-online-co-op/id6787434739"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "Terraria",
+        "applicationCategory": "GameApplication",
+        "operatingSystem": "iOS",
+        "url": "https://apps.apple.com/us/app/terraria/id640364616"
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="shell nav-shell">
+      <a class="brand" href="/" aria-label="Alulim Games home">
+        <img class="brand-mark" src="/assets/alulim-emblem.png" alt="" width="224" height="224" />
+        <span class="brand-name" aria-hidden="true">
+          <span class="brand-name-primary">Alulim</span>
+          <span class="brand-name-secondary">Games</span>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="/#games">Games</a>
+        <a href="/#studio">Studio</a>
+        <a href="/guides/">Guides</a>
+        <a href="/support.html">Support</a>
+      </nav>
+      <a class="header-contact" href="mailto:support@alulimgames.com">Contact us</a>
+      <details class="mobile-nav">
+        <summary aria-label="Open navigation"><span class="menu-icon" aria-hidden="true"></span></summary>
+        <nav class="mobile-panel" aria-label="Mobile navigation">
+          <a href="/#games">Games</a>
+          <a href="/#studio">Studio</a>
+          <a href="/guides/" aria-current="page">Guides</a>
+          <a href="/support.html">Support</a>
+          <a href="mailto:support@alulimgames.com">Contact us</a>
+        </nav>
+      </details>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="shell">
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="/">Home</a></li>
+            <li><a href="/guides/">Guides</a></li>
+            <li><span aria-current="page">4-player online co-op games on iPhone</span></li>
+          </ol>
+        </nav>
+        <span class="eyebrow reveal">Editorial / Comparison</span>
+        <h1 class="reveal reveal-delay-1">iPhone games four people can actually play together online</h1>
+        <p class="reveal reveal-delay-2">Search for this and you mostly get games where four people crowd around one phone, games that are really two-player, and games that are only co-op on PC. This list is the ones where four separate people, on four separate devices, in four separate places, can genuinely play together.</p>
+        <div class="guide-meta">
+          <span>By Alulim Games</span>
+          <span>Verified: <time datetime="2026-09-23">2026-09-23</time></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="guide-body fourp">
+      <div class="shell">
+        <div class="prose">
+
+        <div class="answer-box">
+          <h2 id="short-answer">The short answer</h2>
+          <p>Five games state on their own App Store listing that four people can play together online on iPhone or iPad: <strong>Bloons TD 6</strong>, <strong>Human: Fall Flat</strong>, <strong>Minecraft</strong>, <strong>Pippin Plaza</strong> and <strong>Terraria</strong>. Terraria supports up to eight; the other four top out at four.</p>
+          <p>Four of the five are paid apps. Pippin Plaza is the free one, and it shows ads. Minecraft's online mode needs a free Xbox Live account.</p>
+          <p>The most common mistake in lists on this topic is <strong>Stardew Valley</strong>, which has co-op on desktop and console but not on iPhone. Apple's own listing says so: <em>&ldquo;multiplayer functionality not supported&rdquo;</em>.</p>
+        </div>
+
+        <p><strong>Disclosure:</strong> Alulim Games publishes Pippin Plaza, one of the five verified entries below. It is listed alphabetically alongside the others, judged against the same criteria, and its monetisation is described in the same words we use for everything else. Where another game does something better, this page says so.</p>
+
+        <h2 id="criteria">What had to be true to make the list</h2>
+        <p>The criteria were fixed before the games were chosen. A game is in the verified table only if a first-party source states all four of these.</p>
+        <ul>
+          <li><strong>It runs natively on iPhone or iPad.</strong> Not streamed, not remote-played from a computer, not console-only.</li>
+          <li><strong>The multiplayer is with other people.</strong> Not bots, not asynchronous turns, not leaderboards.</li>
+          <li><strong>The multiplayer is online.</strong> Four people in four different places, not four people around one screen.</li>
+          <li><strong>Four players fit in one session.</strong> A game capped at two is a good game and the wrong answer to this question.</li>
+        </ul>
+        <p>Every classification below quotes the sentence it rests on. Where a listing establishes one half of the test but not the other, the game goes in the second section with the gap named, rather than being quietly promoted or quietly dropped.</p>
+
+        <h2 id="verified">Verified: four players, online, on iOS</h2>
+        <div class="table-wrap" role="region" aria-label="Verified four-player online co-op games on iPhone" tabindex="0">
+          <table class="compare">
+            <caption>Listed alphabetically. Not a ranking, and no scores. Verified 2026-09-23 against each game's App Store listing.</caption>
+            <thead>
+              <tr>
+                <th scope="col">Game</th>
+                <th scope="col">Seller</th>
+                <th scope="col">Online players</th>
+                <th scope="col">How you connect</th>
+                <th scope="col">Local play too?</th>
+                <th scope="col">Solo</th>
+                <th scope="col">Price</th>
+                <th scope="col">Focus</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row"><a href="https://apps.apple.com/us/app/bloons-td-6/id1118115766" rel="noopener">Bloons TD 6</a></th>
+                <td>Ninja Kiwi Limited</td>
+                <td><strong>Up to 4 online</strong></td>
+                <td>Public or private co-op games</td>
+                <td>Not stated</td>
+                <td>Yes — full offline single player</td>
+                <td>Paid — US$6.99</td>
+                <td>Tower defence strategy</td>
+              </tr>
+              <tr>
+                <th scope="row"><a href="https://apps.apple.com/us/app/human-fall-flat/id1438091392" rel="noopener">Human: Fall Flat</a></th>
+                <td>505 Games (US), Inc.</td>
+                <td><strong>Up to 4 online</strong></td>
+                <td>Online multiplayer lobbies</td>
+                <td>Not stated</td>
+                <td>Yes — the campaign is playable alone</td>
+                <td>Paid — US$4.99</td>
+                <td>Physics puzzle platformer</td>
+              </tr>
+              <tr>
+                <th scope="row"><a href="https://apps.apple.com/us/app/minecraft/id479516143" rel="noopener">Minecraft: Play with Friends!</a></th>
+                <td>Mojang AB</td>
+                <td><strong>Up to 4 online</strong></td>
+                <td>Free Xbox Live account required</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Paid — US$6.99</td>
+                <td>Sandbox survival and building</td>
+              </tr>
+              <tr class="is-ours">
+                <th scope="row"><a href="https://apps.apple.com/us/app/pippin-plaza-online-co-op/id6787434739" rel="noopener">Pippin Plaza: Online Co-op</a></th>
+                <td>Alulim Games</td>
+                <td><strong>2–4 online</strong></td>
+                <td>Private room code</td>
+                <td>No</td>
+                <td>Yes — you control two Pippins</td>
+                <td>Free — ads, optional IAP</td>
+                <td>Co-op puzzle platformer</td>
+              </tr>
+              <tr>
+                <th scope="row"><a href="https://apps.apple.com/us/app/terraria/id640364616" rel="noopener">Terraria</a></th>
+                <td>505 Games (US), Inc.</td>
+                <td><strong>Up to 8 online</strong></td>
+                <td>Device-to-device hosted game, or a PC dedicated server</td>
+                <td>Yes — local Wi-Fi</td>
+                <td>Yes</td>
+                <td>Paid — US$4.99</td>
+                <td>Sandbox adventure</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 id="detail">The five, with the evidence</h2>
+      <section class="pick" id="bloons">
+        <h3>Bloons TD 6</h3>
+        <span class="seller">Ninja Kiwi Limited &middot; <a href="https://apps.apple.com/us/app/bloons-td-6/id1118115766" rel="noopener">App Store listing</a> &middot; Paid — US$6.99</span>
+        <p><strong>Bloons TD 6 supports up to 4 online on iPhone and iPad.</strong> The listing also states single player works offline.</p>
+        <blockquote class="evidence"><p>Co-Op! Play every map and mode with up to 3 other players in public or private games.</p>
+        <cite>App Store listing, checked 2026-09-23</cite></blockquote>
+      </section>
+      <section class="pick" id="human">
+        <h3>Human: Fall Flat</h3>
+        <span class="seller">505 Games (US), Inc. &middot; <a href="https://apps.apple.com/us/app/human-fall-flat/id1438091392" rel="noopener">App Store listing</a> &middot; Paid — US$4.99</span>
+        <p><strong>Human: Fall Flat supports up to 4 online on iPhone and iPad.</strong> Closest in shape to a co-op puzzle platformer among the paid entries.</p>
+        <blockquote class="evidence"><p>Online multiplayer for up to 4 players transforms the way Human Fall Flat is played.</p>
+        <cite>App Store listing, checked 2026-09-23</cite></blockquote>
+      </section>
+      <section class="pick" id="minecraft">
+        <h3>Minecraft: Play with Friends!</h3>
+        <span class="seller">Mojang AB &middot; <a href="https://apps.apple.com/us/app/minecraft/id479516143" rel="noopener">App Store listing</a> &middot; Paid — US$6.99</span>
+        <p><strong>Minecraft: Play with Friends! supports up to 4 online on iPhone and iPad.</strong> Realms Plus is a separate paid subscription for a private server with up to 10 friends; the 4-player figure above is the free-account tier.</p>
+        <blockquote class="evidence"><p>Multiplayer servers allow you to play with up to 4 players online with a free Xbox Live account</p>
+        <cite>App Store listing, checked 2026-09-23</cite></blockquote>
+      </section>
+      <section class="pick is-ours" id="pippin">
+        <h3>Pippin Plaza: Online Co-op</h3>
+        <span class="seller">Alulim Games &middot; <a href="https://apps.apple.com/us/app/pippin-plaza-online-co-op/id6787434739" rel="noopener">App Store listing</a> &middot; Free — ads, optional IAP</span>
+        <p><strong>Pippin Plaza: Online Co-op supports 2–4 online on iPhone and iPad.</strong> Published by Alulim Games, who also publish this guide.</p>
+        <blockquote class="evidence"><p>Play online with 2 to 4 players using private room codes, or take on the quest campaign solo by controlling two Pippins.</p>
+        <cite>App Store listing, checked 2026-09-23</cite></blockquote>
+      </section>
+      <section class="pick" id="terraria">
+        <h3>Terraria</h3>
+        <span class="seller">505 Games (US), Inc. &middot; <a href="https://apps.apple.com/us/app/terraria/id640364616" rel="noopener">App Store listing</a> &middot; Paid — US$4.99</span>
+        <p><strong>Terraria supports up to 8 online on iPhone and iPad.</strong> Comfortably covers four, and goes beyond it. Online is hosted from a device or a PC server rather than a matchmaking service.</p>
+        <blockquote class="evidence"><p>MULTIPLAYER – Play with up to 7 friends on Local Wifi or Online via device-device Wifi hosted games or through the Mobile Terraria Dedicated Server for PC</p>
+        <cite>App Store listing, checked 2026-09-23</cite></blockquote>
+      </section>
+
+        <h2 id="partial">Close, but the listing does not settle it</h2>
+        <p>These four have online co-op on iOS. In each case a first-party source leaves out the specific detail this page turns on, so they are not in the verified table. The gap is named rather than guessed at.</p>
+        <section class="pick">
+          <h3>Crossy Road Castle</h3>
+          <span class="seller">Hipster Whale Pty Ltd &middot; <a href="https://apps.apple.com/us/app/crossy-road-castle/id1478978570" rel="noopener">App Store listing</a></span>
+          <p class="gap"><strong>Gap:</strong> Player count confirmed, internet play not confirmed first-party.</p>
+          <p>The official site states 1–4 players, and the App Store listing says you can “connect together across multiple devices (or any mix that suits you)”. Neither states whether those devices must share a network. Requires an Apple Arcade subscription.</p>
+        </section>
+        <section class="pick">
+          <h3>Genshin Impact</h3>
+          <span class="seller">COGNOSPHERE PTE. LTD. &middot; <a href="https://apps.apple.com/us/app/genshin-impact/id1517783697" rel="noopener">App Store listing</a></span>
+          <p class="gap"><strong>Gap:</strong> Online co-op confirmed, party size not stated first-party.</p>
+          <p>The App Store listing says “Team up with friends across various platforms”, which establishes online cross-platform co-op, but it states no player count, and HoYoverse&#x27;s front page does not either.</p>
+        </section>
+        <section class="pick">
+          <h3>Spaceteam</h3>
+          <span class="seller">Henry Smith Inc. &middot; <a href="https://apps.apple.com/us/app/spaceteam/id570510529" rel="noopener">App Store listing</a></span>
+          <p class="gap"><strong>Gap:</strong> Player count confirmed, internet play not confirmed first-party.</p>
+          <p>“A cooperative party game for 2 to 8 players… Each player needs a mobile device.” The listing never says the devices can be in different places, and the developer&#x27;s site carries no detail.</p>
+        </section>
+        <section class="pick">
+          <h3>Sky: Children of the Light</h3>
+          <span class="seller">thatgamecompany &middot; <a href="https://apps.apple.com/us/app/sky-children-of-the-light/id1462117269" rel="noopener">App Store listing</a></span>
+          <p class="gap"><strong>Gap:</strong> Online confirmed, but it is a shared world rather than a 4-player session.</p>
+          <p>The listing describes collaborating with other players in a shared online world. It states no fixed party size, so it does not answer “can my four friends play together” in the way the other entries do.</p>
+        </section>
+
+        <h2 id="confuse">Do not confuse these with 4-player online co-op</h2>
+        <p>Every game below turns up in searches for this phrase. None of them is four people playing together online on an iPhone, and the reason is different each time.</p>
+        <div class="table-wrap confuse" role="region" aria-label="Games commonly mistaken for four-player online co-op" tabindex="0">
+          <table class="compare">
+            <caption>Why each one does not answer this question. Quotes are from the App Store listing, checked 2026-09-23.</caption>
+            <thead>
+              <tr><th scope="col">Game</th><th scope="col">Why not</th><th scope="col">Evidence</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row"><a href="https://apps.apple.com/us/app/stardew-valley/id1406710800" rel="noopener">Stardew Valley</a></th>
+                <td><span class="badge b-partial">No multiplayer at all on iOS</span></td>
+                <td>Apple&#x27;s own listing ends with: “Note: Features new 1.6 update story content, multiplayer functionality not supported.” The desktop and console versions do have co-op; the iPhone version does not.</td>
+              </tr>
+              <tr>
+                <th scope="row"><a href="https://apps.apple.com/us/app/1-2-3-4-player-games/id1635978552" rel="noopener">1 2 3 4 Player Games</a></th>
+                <td><span class="badge b-partial">Same device only</span></td>
+                <td>“If you want to play fun mini games with your friends all together on the same device, this is a great game for you!” Everyone has to be holding the same phone.</td>
+              </tr>
+              <tr>
+                <th scope="row"><a href="https://apps.apple.com/us/app/link-4-online/id6739606990" rel="noopener">Link 4 - Online</a></th>
+                <td><span class="badge b-partial">Two players, not four</span></td>
+                <td>The “4” is four-in-a-row, the winning line, not the player count. It is a two-player Connect Four game with an online mode.</td>
+              </tr>
+              <tr>
+                <th scope="row"><a href="https://apps.apple.com/us/app/among-us/id1351168404" rel="noopener">Among Us!</a></th>
+                <td><span class="badge b-partial">Online, but not cooperative</span></td>
+                <td>“Play online with 4-15 players… one or more random players among the Crew are Impostors bent on killing everyone.” Some players are working against the others by design.</td>
+              </tr>
+              <tr>
+                <th scope="row"><a href="https://apps.apple.com/us/app/great-minds-think-alike/id6753956058" rel="noopener">Great Minds – Think Alike</a></th>
+                <td><span class="badge b-partial">Online, but scored individually</span></td>
+                <td>“2-6 Players” with a real online mode, but each player is scored on how well they predict another player, so it is a party guessing game rather than co-op.</td>
+              </tr>
+              <tr>
+                <th scope="row"><a href="https://apps.apple.com/us/app/fire-and-water-online-co-op/id1508581240" rel="noopener">Fire and Water Online Co-op</a></th>
+                <td><span class="badge b-partial">Online, but exactly two players</span></td>
+                <td>Built around one fire character and one water character. Genuine online co-op, and a good pick for a pair, but it does not scale to four.</td>
+              </tr>
+              <tr>
+                <th scope="row"><a href="https://apps.apple.com/us/app/pepelo-adventure-co-op-game/id6670445088" rel="noopener">Pepelo - Adventure CO-OP Game</a></th>
+                <td><span class="badge b-partial">Online, but exactly two players</span></td>
+                <td>Real-time online co-op through a room code, for two players only.</td>
+              </tr>
+              <tr>
+                <th scope="row"><a href="https://apps.apple.com/us/app/bokura/id1605095285" rel="noopener">BOKURA</a></th>
+                <td><span class="badge b-partial">Online, but exactly two players</span></td>
+                <td>“An exclusively two-player puzzle adventure.” It cannot even be played alone.</td>
+              </tr>
+              <tr>
+                <th scope="row"><a href="https://apps.apple.com/us/app/level-devil-not-a-troll-game/id6477413486" rel="noopener">Level Devil - NOT A Troll Game</a></th>
+                <td><span class="badge b-partial">Local only, two players</span></td>
+                <td>The listing offers a “Local 2-player mode to share the suffering” and no online mode.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 id="which">Which one fits your group?</h2>
+        <table class="chooser">
+          <thead><tr><th scope="col">If&hellip;</th><th scope="col">Look at</th><th scope="col">Why</th></tr></thead>
+          <tbody>
+            <tr><td>You want a puzzle or platforming game</td><td>Human: Fall Flat or Pippin Plaza</td><td>Both are built around physical co-operation rather than combat. Human: Fall Flat is paid and physics-driven; Pippin Plaza is free, room-code based and quest-structured.</td></tr>
+            <tr><td>You would rather pay once than play a free, ad-supported game</td><td>Bloons TD 6, Human: Fall Flat, Minecraft or Terraria</td><td>All four are paid downloads. Pippin Plaza is the only entry in this table whose monetisation explicitly includes advertising; it is free, and an optional purchase removes the automatic ads.</td></tr>
+            <tr><td>You want the largest world to share</td><td>Minecraft or Terraria</td><td>Both are open-ended sandboxes with far more content than a level-based co-op game, and Terraria supports up to eight players rather than four.</td></tr>
+            <tr><td>Your group is scattered and you just want them in quickly</td><td>Pippin Plaza</td><td>A six-character room code with no platform account. Minecraft needs a free Xbox Live account first; Terraria needs someone to host.</td></tr>
+            <tr><td>You want to play alone as often as with friends</td><td>Bloons TD 6</td><td>Its listing states single player works offline, so the game does not depend on anyone else being available.</td></tr>
+          </tbody>
+        </table>
+
+        <div class="faq">
+          <h2 id="faq">Questions people actually ask</h2>
+        <h3>Which iPhone games support four players online?</h3>
+        <p>Of everything we checked, five state it on their own App Store listing: Bloons TD 6, Human: Fall Flat, Minecraft, Pippin Plaza and Terraria. Terraria goes to eight; the other four top out at four.</p>
+        <h3>Is Stardew Valley co-op on iPhone?</h3>
+        <p>No. Apple&#x27;s listing for the iOS version ends with “multiplayer functionality not supported”. The PC and console versions do have co-op, which is why it keeps appearing in mobile co-op lists by mistake.</p>
+        <h3>What is the difference between local and online multiplayer here?</h3>
+        <p>Local multiplayer means everyone shares one device or one network. Online multiplayer means four people in four different places can play together. Many of the top results for this search are local-only apps, including “1 2 3 4 Player Games”, whose own listing says “all together on the same device”.</p>
+        <h3>Are there free options?</h3>
+        <p>Pippin Plaza is free to download, with ads and optional in-app purchases. The other four verified entries are paid apps: Bloons TD 6 is US$6.99, Minecraft is US$6.99, Human: Fall Flat and Terraria are US$4.99 each. Prices are U.S. storefront figures checked on 2026-09-23.</p>
+        <h3>Do any of them need an account or subscription?</h3>
+        <p>Minecraft&#x27;s four-player online mode requires a free Xbox Live account, and its Realms Plus private server is a separate paid subscription. Crossy Road Castle requires an Apple Arcade subscription. The others need no account beyond the App Store.</p>
+        <h3>Can any of these be played alone?</h3>
+        <p>Yes, all five verified entries have a single-player route. Bloons TD 6 states its single player works offline, and Pippin Plaza&#x27;s campaign can be played solo by controlling two characters.</p>
+        </div>
+
+        <h2 id="related">Related guides</h2>
+        <p>If you came here from PICO PARK specifically, the <a href="/guides/games-like-pico-park-iphone/">guide to co-op puzzle games on iPhone for PICO PARK players</a> compares nine native iOS titles on player count, online play and pricing, and <a href="/guides/pico-park-vs-pippin-plaza/">PICO PARK vs Pippin Plaza</a> sets those two games against each other in detail.</p>
+
+        <h2 id="sources">Primary sources</h2>
+        <p>Each game above links to its own App Store listing, which is where its classification comes from. Other first-party sources used, all checked 2026-09-23:</p>
+        <ul>
+          <li><a href="https://www.crossyroadcastle.com/" rel="noopener">Crossy Road Castle official site</a> (player count)</li>
+          <li><a href="https://genshin.hoyoverse.com/" rel="noopener">Genshin Impact official site</a> (checked for a party size; none stated)</li>
+          <li><a href="http://www.sleepingbeastgames.com" rel="noopener">Sleeping Beast Games</a> (checked for Spaceteam connection details; none stated)</li>
+        </ul>
+        <p>App Store listings change, and player counts change with updates. If something here is out of date, tell us at <a href="mailto:support@alulimgames.com">support@alulimgames.com</a> and we will re-check it.</p>
+
+        <div class="cta">
+          <h2>Pippin Plaza, the free entry on this list</h2>
+          <p>Online co-op for 2 to 4 players over a private room code, 53 handmade quests plus a tutorial, or solo by controlling two Pippins. Free to download, with ads and optional purchases.</p>
+          <div class="cta-actions">
+            <a class="button" href="https://apps.apple.com/us/app/pippin-plaza-online-co-op/id6787434739" rel="noopener">View Pippin Plaza on the App Store</a>
+            <a class="button-ghost" href="/guides/">All Alulim guides</a>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="/" aria-label="Alulim Games home">
+            <img class="brand-mark" src="/assets/alulim-emblem-light.png" alt="" width="224" height="224" loading="lazy" />
+            <span class="brand-name" aria-hidden="true">
+              <span class="brand-name-primary">Alulim</span>
+              <span class="brand-name-secondary">Games</span>
+            </span>
+          </a>
+          <p class="footer-intro">Independent games about systems you can feel—made with care for players who enjoy figuring things out.</p>
+        </div>
+        <div class="footer-group">
+          <h2>Explore</h2>
+          <nav aria-label="Explore">
+            <a href="/guides/">Guides</a>
+            <a href="https://pippinplaza.com/" rel="noopener">Pippin Plaza</a>
+            <a href="/bills-due.html">Bills Due</a>
+            <a href="/support.html">Support</a>
+          </nav>
+        </div>
+        <div class="footer-group">
+          <h2>Legal</h2>
+          <nav aria-label="Legal">
+            <a href="/privacy.html">Privacy policy</a>
+            <a href="/terms.html">Terms of use</a>
+            <a href="mailto:support@alulimgames.com">Contact</a>
+          </nav>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Alulim Games. All rights reserved.</p>
+        <p>Independent / Mobile / Made with intent</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
