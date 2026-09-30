@@ -3,7 +3,8 @@
 Static site served by GitHub Pages. No build step: edit the HTML and push.
 
 - `index.html` — studio landing
-- `bills-due.html` — game page for *Brainrot Bills: Smash an Egg* (formerly *Bills Due: Piggy Bank Smash*; the URL is kept)
+- `brainrot-bills.html` — game page for *Brainrot Bills: Smash an Egg* (formerly *Bills Due: Piggy Bank Smash*)
+- `bills-due.html` — forwards the old game-page address to `brainrot-bills.html`
 - `privacy.html` — privacy policy (required by both app stores)
 - `support.html` — support page (Apple requires a reachable support URL)
 - `terms.html` — terms of use
