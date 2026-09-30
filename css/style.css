@@ -1191,6 +1191,15 @@ h3 {
   filter: drop-shadow(0 16px 24px rgba(8, 16, 31, 0.24));
 }
 
+.screen-mat video {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #0a1324;
+}
+
 .screen-card figcaption {
   display: grid;
   gap: 0.8rem;
