@@ -5,9 +5,9 @@ Static site served by GitHub Pages. No build step: edit the HTML and push.
 - `index.html` — studio landing
 - `brainrot-bills.html` — game page for *Brainrot Bills: Smash an Egg* (formerly *Bills Due: Piggy Bank Smash*)
 - `bills-due.html` — forwards the old game-page address to `brainrot-bills.html`
-- `privacy.html` — privacy policy (required by both app stores)
-- `support.html` — support page (Apple requires a reachable support URL)
-- `terms.html` — terms of use
+- `privacy.html` and its four translations — Brainrot Bills privacy policy
+- `support.html` — Brainrot Bills support and developer contact
+- `terms.html` — Brainrot Bills terms of use
 - `css/style.css` — original responsive design system for the Alulim publisher identity
 - `assets/alulim-logo.png` — the supplied master logo lockup. **Source artwork only**: no page
   loads it. Every derived asset below is cut from it, so regenerate from here if the logo changes.
@@ -25,11 +25,23 @@ Static site served by GitHub Pages. No build step: edit the HTML and push.
 
 ## Release maintenance
 
-1. Keep the App Store and Google Play download URLs aligned with the live listings.
+1. As of 2026-10-13, Brainrot Bills is unavailable for new App Store downloads and
+   its Google Play release is not public. The homepage and game page link to an
+   availability section instead of offering downloads. Before restoring download
+   buttons, verify the live listings and update visible status, metadata and structured data together.
 2. Keep the in-game privacy URL aligned with `https://alulimgames.com/privacy.html`.
-3. The iOS edition has ads and optional in-app purchases. The Google Play edition
+3. The iOS 3.0 edition has ads between runs and optional in-app purchases; any
+   purchase removes those ads, and there are no player-accessible rewarded ads.
+   The Google Play edition
    has ads, including optional rewarded ads, and no in-app purchases. Keep the
    privacy policy, support page and terms consistent with these platform differences.
+4. These policy and purchase statements apply to Brainrot Bills only. Pippin Plaza
+   has separate information at `https://pippinplaza.com/`.
+5. In-game navigation uses `VIBE CHECK`, `PRIVACY CHOICES`, `REPORT AN AD`,
+   `DRIP SHOP` and `RESTORE PURCHASES`. On iOS, `PRIVACY CHOICES` is hidden when
+   tracking is not allowed; device tracking permission changes in iOS Settings.
+6. Keep all five policy languages aligned. The current policy revision is
+   2026-10-13. Individual developer identity and existing canonical URLs remain in place.
 
 ## Performance
 
