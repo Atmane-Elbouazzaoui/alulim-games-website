@@ -377,20 +377,12 @@ h3 {
   letter-spacing: -0.015em;
 }
 
-.store-button-amazon {
-  border-color: var(--clay);
-  background: var(--clay);
-  box-shadow: 0.3rem 0.3rem 0 rgba(223, 94, 46, 0.18);
-}
 
 .store-button:hover {
   box-shadow: 0.5rem 0.5rem 0 rgba(24, 86, 184, 0.22);
   transform: translate(-0.15rem, -0.15rem);
 }
 
-.store-button-amazon:hover {
-  box-shadow: 0.5rem 0.5rem 0 rgba(223, 94, 46, 0.24);
-}
 
 .detail-link {
   display: inline-flex;

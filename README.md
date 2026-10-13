@@ -19,16 +19,17 @@ Static site served by GitHub Pages. No build step: edit the HTML and push.
   full-bleed square: iOS applies its own mask and would otherwise round it twice.
 - `assets/og-alulim.png` — 1200×630 social card for every page except the game page
 - `site.webmanifest` — names the 192/512 icons for Android and installed-PWA use
-- `assets/bills-due-hero.jpg` — web-optimised 1024×500 Amazon promotional art used above the fold
+- `assets/bills-due-hero.jpg` — legacy web-optimised 1024×500 Bills Due promotional art
 - `assets/bills-due-social.jpg` — 1920×720 launch artwork used for Bills Due social previews
-- `assets/bills-due-{smash,bills,banks,cabinet}.jpg` — web-optimised official iOS and Amazon storefront frames used in the release gallery
+- `assets/bills-due-{smash,bills,banks,cabinet}.jpg` — legacy web-optimised Bills Due storefront frames
 
 ## Release maintenance
 
-1. Keep the App Store and Amazon download URLs aligned with the live listings.
+1. Keep the App Store and Google Play download URLs aligned with the live listings.
 2. Keep the in-game privacy URL aligned with `https://alulimgames.com/privacy.html`.
-3. The privacy policy distinguishes the ad-supported iOS edition from the ad-free
-   Amazon edition. Update it before shipping a build whose behaviour differs.
+3. The iOS edition has ads and optional in-app purchases. The Google Play edition
+   has ads, including optional rewarded ads, and no in-app purchases. Keep the
+   privacy policy, support page and terms consistent with these platform differences.
 
 ## Performance
 
