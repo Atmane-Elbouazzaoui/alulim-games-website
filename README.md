@@ -8,6 +8,8 @@ Static site served by GitHub Pages. No build step: edit the HTML and push.
 - `privacy.html` and its four translations — Brainrot Bills privacy policy
 - `support.html` — Brainrot Bills support and developer contact
 - `terms.html` — Brainrot Bills terms of use
+- `licenses.html` — Brainrot Bills credits, creation-tool terms and software notices
+- `licenses/` — preserved font, sound-pack and software licence records
 - `css/style.css` — original responsive design system for the Alulim publisher identity
 - `assets/alulim-logo.png` — the supplied master logo lockup. **Source artwork only**: no page
   loads it. Every derived asset below is cut from it, so regenerate from here if the logo changes.
@@ -48,3 +50,12 @@ Static site served by GitHub Pages. No build step: edit the HTML and push.
 The site has no framework, build step, JavaScript, analytics, or remote font request.
 Navigation and FAQ disclosure use native HTML. The 213 KB hero is preloaded; the
 remaining release frames load lazily below the fold.
+
+## Licensing page maintenance
+
+Creation-tool references identify the current workflow reported by the owner;
+they are not a blanket commercial-clearance certificate. Confirm the exact
+service and model/dependency versions before making commercial-rights claims.
+Fredoka is referenced by the saved scenes. Selected Kenney-derived hammer and
+vibe impacts match the recorded hashes and are referenced by the audio catalogues.
+Preserve original copyright and licence text in `licenses/`.
