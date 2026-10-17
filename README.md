@@ -2,7 +2,7 @@
 
 Static site served by GitHub Pages. No build step: edit the HTML and push.
 
-- `index.html` — studio landing
+- `index.html` — publisher landing for both games
 - `brainrot-bills.html` — game page for *Brainrot Bills: Smash an Egg* (formerly *Bills Due: Piggy Bank Smash*)
 - `bills-due.html` — forwards the old game-page address to `brainrot-bills.html`
 - `privacy.html` and its four translations — Brainrot Bills privacy policy
@@ -48,8 +48,7 @@ Static site served by GitHub Pages. No build step: edit the HTML and push.
 ## Performance
 
 The site has no framework, build step, JavaScript, analytics, or remote font request.
-Navigation and FAQ disclosure use native HTML. The 213 KB hero is preloaded; the
-remaining release frames load lazily below the fold.
+Navigation and FAQ disclosure use native HTML. The current Pippin App Store hero is preloaded; remaining screenshots load lazily below the fold. Current Pippin PNGs are preserved without image alterations.
 
 ## Licensing page maintenance
 
@@ -59,3 +58,24 @@ service and model/dependency versions before making commercial-rights claims.
 Fredoka is referenced by the saved scenes. Selected Kenney-derived hammer and
 vibe impacts match the recorded hashes and are referenced by the audio catalogues.
 Preserve original copyright and licence text in `licenses/`.
+
+
+## Publisher catalogue and game document routing
+
+pippin-plaza.html is the Pippin Plaza publisher overview.
+policies.html is the game chooser for support, privacy, terms and licensing.
+Pippin's main marketing and player-help site remains https://pippinplaza.com/.
+
+Do not merge the games' policies or redirect their existing document URLs.
+Brainrot Bills keeps privacy.html and its four translations, terms.html,
+support.html and licenses.html on this domain. Pippin Plaza keeps its privacy,
+terms, support and licensing documents on pippinplaza.com, including existing
+translations. Pippin's publisher page links directly to Pippin's own documents.
+
+## Current Pippin screenshot source
+
+The owner supplied Pippin plaza_2_9_Screenshots on 2026-10-17 and identified
+the files as screenshots from the live App Store listing. The selected iPhone
+PNGs in assets/pippin-current-*.png are byte-for-byte copies. They contain
+promotional overlays as supplied and are not described as raw captures.
+PIPPIN_SCREENSHOT_SOURCES.json records the source filenames and exact hashes.

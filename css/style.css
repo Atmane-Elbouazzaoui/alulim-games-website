@@ -1708,3 +1708,19 @@ h3 {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Publisher catalogue additions: shared layout, game-specific content. */
+.developer-credit { margin-top: 1.5rem; color: var(--ink-soft); font-size: 0.85rem; }
+.pippin-game .cover-frame, .game-feature-pippin figure { background: #e5f1eb; }
+.pippin-game .pippin-tagline { margin-bottom: 1rem; color: var(--ink); font-weight: 700; }
+.game-feature-pippin .game-copy { background: #fffdf8; }
+.policy-directory { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
+.policy-card { padding: clamp(1.5rem, 4vw, 3rem); border: 1px solid var(--line); background: var(--white); }
+.policy-card h2 { margin: 1rem 0; font-size: clamp(2.4rem, 4vw, 3.5rem); }
+.policy-card > p { color: var(--ink-soft); }
+.policy-links { display: grid; gap: 0; margin: 2rem 0; border-top: 1px solid var(--line); }
+.policy-links a { display: flex; justify-content: space-between; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--line); text-decoration: none; }
+.policy-links a:hover { text-decoration: underline; text-underline-offset: 0.25em; }
+.policy-contact { margin: 1.5rem 0 0; overflow-wrap: anywhere; font-size: 0.85rem; }
+.policy-credits { margin-top: 3.5rem; }
+@media (max-width: 900px) { .policy-directory { grid-template-columns: 1fr; } }
